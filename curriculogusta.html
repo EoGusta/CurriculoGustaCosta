@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Gustavo Costa</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #1d132c;
+            color: #333;
+            
+        }
+
+        .curriculo{
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            background-color: #f3edff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }    
+
+        .barrinha{
+            width: 280px;
+            background-color: #4a039a;
+            color: #fff;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .barrinha .perfil{
+            margin-bottom: 10px;
+        }
+
+        .barrinha .informacoes {
+            margin-top: 20px;
+            background-color: #efefef;
+            width: 280px;
+            color: #333;
+            border-top: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+            border-right: 2px solid #000000;
+            padding: 10px;
+        }
+
+        .barrinha h2{
+            font-size: 1.8em;
+            line-height: 1.2em;
+        }
+
+        .barrinha p{
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+
+        .barrinha a{
+            color: #000000;
+            text-decoration:none;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        
+        .historico{
+            flex-grow: 1;
+            padding: 30px;
+            border-left: 5px solid #11c79c;
+        }
+
+        .secao{
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+    
+        .secao:last-child {
+            border-bottom: none;
+        }
+
+        .secao h2{
+            color: #2c3e50; 
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size:1.9em;
+        }
+
+        .barraprogresso {
+            display: flex;
+            width: 250px;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden; 
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        .progresso {
+            flex: 1;
+            background-color: #ccc;
+            height: 100%;
+            transition: background-color 0.4s ease-in-out;
+            border-right: 1px solid #c0c0c0;
+        }
+
+        .progresso:last-child { 
+            border-right: none;
+        }
+
+        .progresso.um {
+            background-color: #ff2e2e;
+        }
+
+        .progresso.dois {
+            background-color: #ff8839;
+        }
+
+        .progresso.tres {
+            background-color: #fff645;
+        }
+
+        .progresso.quatro {
+            background-color: #4fd354;
+        } 
+
+        .progresso.cinco {
+            background-color: #33cfff;
+        }
+
+        .progresso:hover {
+            filter: brightness(1.2); 
+        }
+
+        .historico h3 {
+            color: #4a039a; 
+            margin-bottom: 0px;
+        }
+
+        .historico p.detalhes {
+            font-size: 0.9em;
+            color: #666;
+            text-align: left;
+            margin-left: 0px;
+            margin-top: 0px;
+            line-height: 1.4em;
+        }
+
+        .titulo-periodo {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .periodo-detalhes {
+            font-size: 0.8em;
+            font-style: italic;
+            color: #666;
+        }
+
+        .secao > div {
+            margin-bottom: 15px;
+        }
+
+        .secao > div:last-child {
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="curriculo">
+        <aside class="barrinha">
+            <div class="perfil">
+                <img src="./fotominha.png" style="border-radius: 500px; width:100px"/>
+                <h2>Gustavo de Oliveira Costa</h2>
+                <div class="informacoes">
+                    <h3>Informações:</h3>
+                    <a href="mailto:guolicosta@gmail.com">Email de Contato: guolicosta@gmail.com</a>
+                    <p>Idade: 20 Anos</p>
+                    <p>Cidade: Pouso Alegre - MG</p>
+                </div>
+            </div>
+            <div class="skills">
+                <h3>Habilidades:</h3>
+                <p>Topografia</p>
+                <div class="barraprogresso">
+                    <div class="progresso um"></div>
+                    <div class="progresso dois"></div>
+                    <div class="progresso tres"></div>
+                    <div class="progresso quatro"></div>
+                    <div class="progresso cinco"></div> </div>
+                <p>HTML e CSS</p>
+                <div class="barraprogresso">
+                    <div class="progresso um"></div>
+                    <div class="progresso dois"></div>
+                    <div class="progresso"></div>
+                    <div class="progresso"></div>
+                    <div class="progresso"></div> </div>
+                <p>Java</p>
+                <div class="barraprogresso">
+                    <div class="progresso um"></div>
+                    <div class="progresso"></div>
+                    <div class="progresso"></div>
+                    <div class="progresso"></div>
+                    <div class="progresso"></div> </div>
+                <p>Operação de Máquina</p>
+                <div class="barraprogresso">
+                    <div class="progresso um"></div>
+                    <div class="progresso dois"></div>
+                    <div class="progresso tres"></div>
+                    <div class="progresso"></div>
+                    <div class="progresso"></div> </div>
+
+                <p>Improvisação Cênica</p>
+                <div class="barraprogresso">
+                    <div class="progresso um"></div>
+                    <div class="progresso dois"></div>
+                    <div class="progresso tres"></div>
+                    <div class="progresso quatro"></div>
+                    <div class="progresso"></div> </div>    
+            </div>
+        </aside>
+
+        <main class="historico">
+            <section class="secao">
+                <h2>Acadêmico</h2>
+                <div>
+                    <div class="titulo-periodo">
+                        <h3>Curso Técnico Integrado de Edificações</h3>
+                        <p class="periodo-detalhes">2021 - 2023</p>
+                    </div>
+                    <p class="detalhes">
+                        Instituição: IF Sul de Minas Campus Pouso Alegre <br>
+                        Status: Completo
+                    </p>
+                </div>
+                <div>
+                    <div class="titulo-periodo">
+                        <h3>Sistemas de Informação</h3>
+                        <p class="periodo-detalhes">2024 - Atual</p>
+                    </div>
+                    <p class="detalhes">
+                        Instituição: UNIVÁS<br>
+                        Status: Cursando
+                    </p>
+                </div>
+            </section>
+            <section class="secao">
+                <h2>Profissional</h2>
+                <div>
+                    <div class="titulo-periodo">
+                        <h3>Soldado de Topografia</h3>
+                        <p class="periodo-detalhes">2024 - 2025</p>
+                    </div>
+                    <p class="detalhes">
+                        Empresa: 14º Grupo de Artilharia de Campanha<br>
+                        Status: Finalizado
+                    </p>
+                </div>
+                <div>
+                    <div class="titulo-periodo">
+                        <h3>Operador de Produção</h3>
+                        <p class="periodo-detalhes">2025 - Atual</p>
+                    </div>
+                    <p class="detalhes">
+                        Empresa: CIMED<br>
+                        Status: Empregado
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
