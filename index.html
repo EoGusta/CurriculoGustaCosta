@@ -12,27 +12,41 @@
             box-sizing: border-box;
         }
 
+        /* Paleta de Cores Lilás/Roxo Pastel Sugerida */
+        :root {
+            --roxo-principal: #9370DB; /* Roxo Médio Pastel (Main Purple) */
+            --roxo-claro: #E6E6FA;   /* Lavanda (Light Background) */
+            --roxo-mais-claro: #F8F8FF; /* Espírito de Lavanda (Page Background) */
+            --roxo-escuro: #483D8B;   /* Roxo Escuro Suave (Darker Accent) */
+            --cinza-texto: #333;
+            --cinza-detalhe: #666;
+            --verde-detalhe: #7FFFD4; /* Água-marinha suave para o detalhe lateral */
+        }
+
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #1d132c;
-            color: #333;
-            
+            /* Cor de fundo geral suave */
+            background-color: var(--roxo-mais-claro); 
+            color: var(--cinza-texto);
         }
 
         .curriculo{
             display: flex;
             max-width: 1200px;
             margin: 30px auto;
-            background-color: #f3edff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Cor de fundo do corpo principal do currículo */
+            background-color: #ffffff; 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
             border-radius: 8px;
             overflow: hidden;
         }    
 
         .barrinha{
             width: 280px;
-            background-color: #4a039a;
+            /* Roxo Principal para a barra lateral */
+            background-color: var(--roxo-principal); 
             color: #fff;
             padding: 30px;
             display: flex;
@@ -47,18 +61,26 @@
 
         .barrinha .informacoes {
             margin-top: 20px;
-            background-color: #efefef;
-            width: 280px;
-            color: #333;
-            border-top: 2px solid #000000;
-            border-bottom: 2px solid #000000;
-            border-right: 2px solid #000000;
+            /* Fundo para a caixa de informações em um tom pastel muito claro */
+            background-color: var(--roxo-claro); 
+            width: 100%; /* Para preencher a largura da barrinha */
+            color: var(--cinza-texto);
+            /* Borda sutil */
+            border: 2px solid var(--roxo-escuro); 
             padding: 10px;
+            border-radius: 4px;
         }
 
         .barrinha h2{
             font-size: 1.8em;
             line-height: 1.2em;
+            /* Cor mais escura para melhor legibilidade no fundo roxo */
+            color: #fff; 
+        }
+        
+        /* Ajuste de cor do h3 dentro de .informacoes para o texto se destacar no fundo claro */
+        .barrinha .informacoes h3 {
+             color: var(--roxo-escuro); 
         }
 
         .barrinha p{
@@ -67,22 +89,25 @@
         }
 
         .barrinha a{
-            color: #000000;
-            text-decoration:none;
+            /* Cor do link no fundo claro da caixa de informações */
+            color: var(--roxo-escuro); 
+            text-decoration: underline; /* underline para acessibilidade em links */
             margin-bottom: 5px;
             font-size: 1.1em;
+            display: block;
         }
-        
+
         .historico{
             flex-grow: 1;
             padding: 30px;
-            border-left: 5px solid #11c79c;
+            /* Cor pastel/lilás suave para a borda lateral */
+            border-left: 5px solid var(--roxo-claro); 
         }
 
         .secao{
             margin-bottom: 25px;
             padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #ddd; /* Linha de separação mais suave */
         }
     
         .secao:last-child {
@@ -90,19 +115,21 @@
         }
 
         .secao h2{
-            color: #2c3e50; 
+            /* Cor escura para o título da seção */
+            color: var(--roxo-escuro); 
             margin-top: 0px;
             margin-bottom: 10px;
             font-size:1.9em;
         }
-
+        
+        /* Manter as cores de progresso para visualização clara de níveis */
         .barraprogresso {
             display: flex;
             width: 250px;
             height: 20px;
             background-color: #e0e0e0;
             border-radius: 10px;
-            overflow: hidden; 
+            overflow: hidden;    
             box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
             margin-top: 10px;
             margin-bottom: 20px;
@@ -116,42 +143,44 @@
             border-right: 1px solid #c0c0c0;
         }
 
-        .progresso:last-child { 
+        .progresso:last-child {    
             border-right: none;
         }
-
+        /* Cores de progresso (mantidas) */
         .progresso.um {
-            background-color: #ff2e2e;
+            background-color: #ff2e2e; /* Vermelho */
         }
 
         .progresso.dois {
-            background-color: #ff8839;
+            background-color: #ff8839; /* Laranja */
         }
 
         .progresso.tres {
-            background-color: #fff645;
+            background-color: #fff645; /* Amarelo */
         }
 
         .progresso.quatro {
-            background-color: #4fd354;
-        } 
+            background-color: #4fd354; /* Verde */
+        }    
 
         .progresso.cinco {
-            background-color: #33cfff;
+            background-color: #33cfff; /* Ciano/Azul claro */
         }
+        /* Fim das cores de progresso */
 
         .progresso:hover {
-            filter: brightness(1.2); 
+            filter: brightness(1.2);    
         }
 
         .historico h3 {
-            color: #4a039a; 
+            /* Cor dos títulos de cargo/curso em um roxo mais escuro para destaque */
+            color: var(--roxo-escuro);    
             margin-bottom: 0px;
         }
 
         .historico p.detalhes {
             font-size: 0.9em;
-            color: #666;
+            color: var(--cinza-detalhe);
             text-align: left;
             margin-left: 0px;
             margin-top: 0px;
@@ -168,7 +197,7 @@
         .periodo-detalhes {
             font-size: 0.8em;
             font-style: italic;
-            color: #666;
+            color: var(--cinza-detalhe);
         }
 
         .secao > div {
@@ -185,7 +214,7 @@
     <div class="curriculo">
         <aside class="barrinha">
             <div class="perfil">
-                <img src="./fotominha.png" style="border-radius: 500px; width:100px"/>
+                <img src="./fotominha.png" style="border-radius: 500px; width:100px; border: 3px solid #fff;"/>
                 <h2>Gustavo de Oliveira Costa</h2>
                 <div class="informacoes">
                     <h3>Informações:</h3>
@@ -195,7 +224,7 @@
                 </div>
             </div>
             <div class="skills">
-                <h3>Habilidades:</h3>
+                <h3 style="color: #fff; margin-top: 20px;">Habilidades:</h3>
                 <p>Topografia</p>
                 <div class="barraprogresso">
                     <div class="progresso um"></div>
